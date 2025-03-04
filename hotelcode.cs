@@ -14,6 +14,12 @@ namespace OrderEase
         public MainForm()
         {
             InitializeComponent();
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog(); // Block until login form is closed
+            if (loginForm.DialogResult != DialogResult.OK)
+            {
+                Application.Exit(); // Exit if login fails
+            }
             InitializeMenu();
         }
 
