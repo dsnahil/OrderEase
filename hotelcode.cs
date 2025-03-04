@@ -36,12 +36,14 @@ namespace OrderEase
             imageList.Images.Add(Image.FromFile("sandwich.png"));
             imageList.Images.Add(Image.FromFile("coffee.png"));
             listViewMenu.SmallImageList = imageList;
-            
-            for (int i = 0; i < foodItems.Length; i++)
+    
+            var orders = databaseManager.GetOrders();
+            foreach (var order in orders)
             {
-                ListViewItem item = new ListViewItem(foodItems[i], i);
-                item.SubItems.Add(prices[i].ToString());
-                listViewMenu.Items.Add(item);
+                ListViewItem orderItem = new ListViewItem(order.ItemName);
+                orderItem.SubItems.Add(order.Price.ToString());
+                orderItem.SubItems.Add(order.Quantity.ToString());
+                listViewOrder.Items.Add(orderItem);
             }
         }
 
