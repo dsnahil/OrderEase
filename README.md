@@ -3,6 +3,8 @@
 ## 📌 Project Overview
 OrderEase is a Windows desktop application designed for restaurant owners and customers to easily **select items**, **place orders**, and **manage billing** efficiently. Built using **C# and .NET Framework**, it offers an intuitive interface with modern UI components and real-time order management.
 
+![_- visual selection (1)](https://github.com/user-attachments/assets/ebe16643-0acf-4e44-b5c5-faa27494223d)
+
 ---
 ## 🚀 Features
 - **Modern UI with MetroFramework** for a sleek and polished design 🎨
